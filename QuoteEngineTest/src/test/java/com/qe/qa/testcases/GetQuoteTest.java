@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.qe.qa.base.TestBase;
-import com.qe.qa.util.TestUtil;
+import com.qe.qa.util.TestUtils;
 import com.quote.qa.pages.GetQuote;
 
 public class GetQuoteTest extends TestBase {
@@ -39,9 +39,14 @@ public class GetQuoteTest extends TestBase {
 		}
 
 		if (b)
-			TestUtil.sendEmail("SUCCESS. Getting quote with PublicData test", "SUCCESS - GetQuote w/ PublicData");
+			TestUtils.sendEmail(
+					"SUCCESS. Getting quote with PublicData test got passed",
+					"SUCCESS - GetQuote w/ PublicData :)");
 		else
-			TestUtil.sendEmail("FAILED. Getting quote with PublicData test", "FAILED - GetQuote w/ PublicData");
+			TestUtils.sendEmail(
+					"FAILED. Getting quote with PublicData test got failed, but I'm checking immediately",
+					"FAILED - GetQuote w/ PublicData :/"
+					);
 
 	}
 
@@ -59,9 +64,12 @@ public class GetQuoteTest extends TestBase {
 		}
 
 		if (b)
-			TestUtil.sendEmail("SUCCESS. Getting quote with manual input test", "SUCCESS - GetQuote w/ Manual input");
+			TestUtils.sendEmail( "SUCCESS - GetQuote w/ Manual input :)",
+					"SUCCESS. Getting quote with manual input test got passed");
 		else
-			TestUtil.sendEmail("FAILED. Getting quote with manual input test", "FAILED - GetQuote w/ Manual input");
+			TestUtils.sendEmail("FAILED - GetQuote w/ Manual input :/",
+					"FAILED. Getting quote with manual input test got failed, but I'm checking immediately"
+					);
 
 	}
 
@@ -72,6 +80,7 @@ public class GetQuoteTest extends TestBase {
 		System.out.println("Page Title :" + actualTitle);
 
 		String expectedTitle = "A-MAX Auto Insurance";
+		String descr = "";
 
 		boolean b = true;
 		try {
@@ -81,13 +90,21 @@ public class GetQuoteTest extends TestBase {
 		} catch (Exception e) {
 
 			// TestUtil.sendEmail("");
+			descr = "Title mismatched...";
+			b = false;
 		}
 
 		if (b)
-			TestUtil.sendEmail("SUCCESS.A-max website UP and Running test!",
-					"SUCCESS - A-max website is Up and Running");
+			TestUtils.sendEmail(
+					"SUCCESS.A-max Quote Engine UP and Running test got passed.",
+					"SUCCESS - A-max Quote Engine is Up and Running :)"
+					
+					);
 		else
-			TestUtil.sendEmail("FAILED..A-max website UP and Running test!", "FAILED - A-max website has crashed!");
+			TestUtils.sendEmail(
+					"FAILED. A-max Quote Engine UP and Running test got failed, but I'm checking immediately...!!",
+					"FAILED - A-max Quote Enginegot failed:/"
+					);
 
 	}
 
@@ -98,11 +115,13 @@ public class GetQuoteTest extends TestBase {
 
 		String actualTitle = driver.getTitle();
 
-		System.out.println("Page Title :" + actualTitle);
+		System.out.println("Page Title is:" + actualTitle);
 
 		String expectedTitle = "A-MAX Auto Insurance | Cheap Car Insurance in Texas";
 
 		String descr = "";
+
+		System.out.println(actualTitle);
 
 		boolean b = true;
 
@@ -121,12 +140,15 @@ public class GetQuoteTest extends TestBase {
 
 		if (b)
 
-			TestUtil.sendEmail("SUCCESS.Quote Engine app is UP and Running test!",
-					"SUCCESS - Quote Engine app is Up and Running");
+			TestUtils.sendEmail(
+					"SUCCESS.A-max website UP and Running test got passed.",
+					"SUCCESS - A-max website is Up and Running :)"
+					);
 
 		else {
-			TestUtil.sendEmail("FAILED.Quote Engine app UP and Running test!",
-					"FAILED - Quote Engine app has crashed!");
+			TestUtils.sendEmail("FAILED - A-max website got failed for page title verification, but I'm checking immediately...!",
+					"FAILED.A-max website UP and Running test got failed :/"
+					);
 
 			throw (new AssertionError(descr));
 		}

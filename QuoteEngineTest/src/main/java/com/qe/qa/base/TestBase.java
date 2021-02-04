@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.qe.qa.util.TestUtil;
+import com.qe.qa.util.TestUtils;
 
 
 public class TestBase {
@@ -23,8 +23,8 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					"C:\\Users\\MDinc\\eclipse-workspace\\QuoteEngineTest\\"
-							+ "src\\main\\java\\com\\qe\\qa\\config\\config.properties");
+					"C:\\Users\\MDinc\\git\\amax\\QuoteEngineTest"
+					+ "\\src\\main\\java\\com\\qe\\qa\\config\\config.properties");
 			prop.load(ip);
 			
 		} catch (FileNotFoundException e) {
@@ -36,7 +36,9 @@ public class TestBase {
 	}
 	
 	public static void initialization() {
+		
 		String browserName = prop.getProperty("browser");
+		
 		if(browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\browserdrivers\\chromedriver86.exe");
 			 driver = new ChromeDriver();
@@ -47,8 +49,8 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(TestUtils.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));
 		

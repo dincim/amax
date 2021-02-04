@@ -4,15 +4,16 @@ import javax.mail.*;
 import javax.mail.internet.*;
 import java.util.*;
 
-public class TestUtil {
+public class TestUtils {
 
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 10;
 
 	public static void sendEmail(String m, String s) {
+		
 		// Mention the Recipient's email address
 		// String to = "mozcan@gmail.com";
-		//String to = "mozcan@amaxinsurance.com";
+		String to = "mozcan@amaxinsurance.com";
 		// Mention the Sender's email address
 		String from = "mdinc@amaxinsurance.com";
 		// String from = "mdinc@amaxinsurance.com";
@@ -45,11 +46,11 @@ public class TestUtil {
 			// Set To: header field of the header.
 			// message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-//			message.addRecipient(Message.RecipientType.TO, new InternetAddress("dmcdonald@amaxinsurance.com"));
-//			message.addRecipient(Message.RecipientType.TO, new InternetAddress("afarooqui@amaxinsurance.com"));
-//	        message.addRecipient(Message.RecipientType.TO, new InternetAddress("mozcan@amaxinsurance.com"));
-////	        message.addRecipient(Message.RecipientType.TO, new InternetAddress("dincim@hotmail.com"));
-//			message.addRecipient(Message.RecipientType.TO, new InternetAddress("mdinc@amaxinsurance.com"));
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress("dmcdonald@amaxinsurance.com"));
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress("afarooqui@amaxinsurance.com"));
+	        message.addRecipient(Message.RecipientType.TO, new InternetAddress("mozcan@amaxinsurance.com"));
+//	        message.addRecipient(Message.RecipientType.TO, new InternetAddress("dincim@hotmail.com"));
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress("mdinc@amaxinsurance.com"));
 
 			// Set Subject: header field
 			//message.setSubject("Daily Automated Test Results!");

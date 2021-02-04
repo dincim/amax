@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qe.qa.base.TestBase;
-import com.qe.qa.util.TestUtil;
+import com.qe.qa.util.TestUtils;
 
 public class GetQuote extends TestBase {
 
@@ -124,7 +124,7 @@ public class GetQuote extends TestBase {
 		
 			DriverLicenseNum.sendKeys("1");
 	
-			//TestUtil.sendEmail("Test bvasladi");
+			//TestUtil.sendEmail("Test basladi");
 	
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			executor.executeScript("arguments[0].click();", checkDisclosure);
