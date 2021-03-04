@@ -46,9 +46,9 @@ public class TestUtils {
 			// Set To: header field of the header.
 			// message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress("dmcdonald@amaxinsurance.com"));
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress("afarooqui@amaxinsurance.com"));
-	        message.addRecipient(Message.RecipientType.TO, new InternetAddress("mozcan@amaxinsurance.com"));
+//			message.addRecipient(Message.RecipientType.TO, new InternetAddress("dmcdonald@amaxinsurance.com"));
+//			message.addRecipient(Message.RecipientType.TO, new InternetAddress("afarooqui@amaxinsurance.com"));
+//	        message.addRecipient(Message.RecipientType.TO, new InternetAddress("mozcan@amaxinsurance.com"));
 //	        message.addRecipient(Message.RecipientType.TO, new InternetAddress("dincim@hotmail.com"));
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress("mdinc@amaxinsurance.com"));
 

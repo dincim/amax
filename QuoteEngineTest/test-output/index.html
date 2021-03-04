@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\MDinc\AppData\Local\Temp\testng-eclipse--392075971\testng-customsuite.xml</span>
+                    <span>C:\Users\MDinc\AppData\Local\Temp\testng-eclipse-498559476\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.qe.qa.testcases.GetQuoteTest" class="method navigator-link" hash-for-method="getTitleHome">getTitleHome</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.qe.qa.testcases.GetQuoteTest" class="method navigator-link" hash-for-method="getTitleRateEngine">getTitleRateEngine</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.qe.qa.testcases.GetQuoteTest" class="method navigator-link" hash-for-method="GetQuoteDl">GetQuoteDl</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -132,16 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getTitleHome">
-                  </a> <!-- getTitleHome -->
-                  <span class="method-name">getTitleHome</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getTitleRateEngine">
-                  </a> <!-- getTitleRateEngine -->
-                  <span class="method-name">getTitleRateEngine</span>
+                  <a name="GetQuoteDl">
+                  </a> <!-- GetQuoteDl -->
+                  <span class="method-name">GetQuoteDl</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\MDinc\AppData\Local\Temp\testng-eclipse--392075971\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\MDinc\AppData\Local\Temp\testng-eclipse-498559476\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -198,20 +186,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getTitleHome')
+data.setCell(0, 1, 'GetQuoteDl')
 data.setCell(0, 2, 'com.qe.qa.testcases.GetQuoteTest')
-data.setCell(0, 3, 3741);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'getTitleRateEngine')
-data.setCell(1, 2, 'com.qe.qa.testcases.GetQuoteTest')
-data.setCell(1, 3, 1569);
+data.setCell(0, 3, 31915);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -226,15 +210,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.qe.qa.testcases.GetQuoteTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">GetQuoteDl</span>
+                <span class="ignored-method-name">getTitleHome</span>
                 <br/>
                 <span class="ignored-method-name">getQuoteManual</span>
+                <br/>
+                <span class="ignored-method-name">getTitleRateEngine</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -252,24 +238,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">getTitleHome</span>
-                <span class="method-start">7116 ms</span>
+                <span class="method-name">GetQuoteDl</span>
+                <span class="method-start">4578 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10862 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">11813 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">getTitleRateEngine</span>
-                <span class="method-start">18373 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">19945 ms</span>
+                <span class="method-start">36498 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -14,15 +14,14 @@ import com.qe.qa.util.TestUtils;
 public class GetQuote extends TestBase {
 
 	// Page Factory-- OR
-	
-	
+
 	@FindBy(xpath = "//input[@name='licenseId']")
 	WebElement DriverLicenseNum;
 
 //	@FindBy(xpath = "//input[@name='name']")
 //	WebElement driverName;
 
-	@FindBy(xpath = "//input[@id='custom-checkbox-beforeStartStepDiscossion']") ////input[@id='custom-checkbox-beforeStartStepDiscossion']
+	@FindBy(xpath = "//input[@id='custom-checkbox-beforeStartStepDiscossion']") //// input[@id='custom-checkbox-beforeStartStepDiscossion']
 	WebElement checkDisclosure;
 
 	@FindBy(xpath = "//button[@class='c-btn-red custom-hover filled block']")
@@ -117,15 +116,14 @@ public class GetQuote extends TestBase {
 
 	public boolean GetQuoteDl() {
 
-		boolean testResult=true;
-		
+		boolean testResult = true;
+
 		try {
-			
-		
+
 			DriverLicenseNum.sendKeys("1");
-	
-			//TestUtil.sendEmail("Test basladi");
-	
+
+			// TestUtil.sendEmail("Test basladi");
+
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			executor.executeScript("arguments[0].click();", checkDisclosure);
 			pauseFiveSecond();
@@ -135,104 +133,104 @@ public class GetQuote extends TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				return false;
-				//TestUtil.sendEmail("GetQuote Failed with PublicData mode 1");
+				// TestUtil.sendEmail("GetQuote Failed with PublicData mode 1");
 			}
-		
-	
-		wait.until(ExpectedConditions.elementToBeClickable(nxtBtnst)).click();
 
-		pauseFiveSecond();
-		
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-return false;
-			//TestUtil.sendEmail("GetQuote Failed with PublicData mode 2");
-		}
+			wait.until(ExpectedConditions.elementToBeClickable(nxtBtnst)).click();
 
-		wait.until(ExpectedConditions.elementToBeClickable(nxtBtnnd)).click();
+			pauseFiveSecond();
 
-		statusMSingle.click();
-		pauseFiveSecond();
-		statusGMale.click();
-		pauseFiveSecond();
-		statusInsuredYes.click();
-		pauseFiveSecond();
-
-		wait.until(ExpectedConditions.elementToBeClickable(nxtBtnrd)).click();
-
-		pauseFiveSecond();
-
-		wait.until(ExpectedConditions.elementToBeClickable(nxtBtnNo)).click();
-		// nxtBtnNo.click();
-
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-			//TestUtil.sendEmail("GetQuote Failed with PublicData mode 3");
-		}
-
-		selectCar.click();
-
-		wait.until(ExpectedConditions.elementToBeClickable(nxtBtnCar)).click();
-
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-			//TestUtil.sendEmail("GetQuote Failed with PublicData mode 4");
-		}
-		
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-
-		wait.until(ExpectedConditions.elementToBeClickable(nxtGetQuote)).click();
-		
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-
-			//TestUtil.sendEmail("GetQuote Failed with PublicData mode 5");
-		}
-
-		String MainWindow = driver.getWindowHandle();
-
-		for (String activeHandle : driver.getWindowHandles()) {
-			if (!activeHandle.equals(MainWindow)) {
-				driver.switchTo().window(activeHandle);
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				return false;
+				// TestUtil.sendEmail("GetQuote Failed with PublicData mode 2");
 			}
-			phoneNum.sendKeys("11111111111");
-			email.sendKeys("tidyseyhan@gmail.com");
-			pauseOneSecond();
-			contBtn.click();
-		}
 
-		pauseFiveSecond();
+			wait.until(ExpectedConditions.elementToBeClickable(nxtBtnnd)).click();
 
-		//TestUtil.sendEmail("GetQuote Failed with PublicData mode button click oncesi");
-		
-		okBtn.click();
+			statusMSingle.click();
+			pauseFiveSecond();
+			statusGMale.click();
+			pauseFiveSecond();
+			statusInsuredYes.click();
+			pauseFiveSecond();
 
-		//TestUtil.sendEmail("GetQuote Failed with PublicData mode sonrasi");
-		}catch(Exception e) {
+			wait.until(ExpectedConditions.elementToBeClickable(nxtBtnrd)).click();
+
+			pauseFiveSecond();
+
+			wait.until(ExpectedConditions.elementToBeClickable(nxtBtnNo)).click();
+			// nxtBtnNo.click();
+
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+
+				// TestUtil.sendEmail("GetQuote Failed with PublicData mode 3");
+			}
+
+			selectCar.click();
+
+			wait.until(ExpectedConditions.elementToBeClickable(nxtBtnCar)).click();
+
+			try {
+				Thread.sleep(6000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+
+				// TestUtil.sendEmail("GetQuote Failed with PublicData mode 4");
+			}
+
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+			wait.until(ExpectedConditions.elementToBeClickable(nxtGetQuote)).click();
+
+			try {
+				Thread.sleep(6000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+
+				// TestUtil.sendEmail("GetQuote Failed with PublicData mode 5");
+			}
+
+			String MainWindow = driver.getWindowHandle();
+
+			for (String activeHandle : driver.getWindowHandles()) {
+				if (!activeHandle.equals(MainWindow)) {
+					driver.switchTo().window(activeHandle);
+				}
+				phoneNum.sendKeys("11111111111");
+				email.sendKeys("tidyseyhan@gmail.com");
+				pauseOneSecond();
+				contBtn.click();
+			}
+
+			pauseFiveSecond();
+
+			// TestUtil.sendEmail("GetQuote Failed with PublicData mode button click
+			// oncesi");
+
+			okBtn.click();
+
+			// TestUtil.sendEmail("GetQuote Failed with PublicData mode sonrasi");
+		} catch (Exception e) {
 			return false;
-			}
+		}
 		return testResult;
-		
+
 	}
 
 	public boolean getQuoteManual() {
-		
-		boolean testResult=true;
+
+		boolean testResult = true;
 
 		// DriverLicenseNum.sendKeys("1");
 
@@ -293,7 +291,7 @@ return false;
 		wait.until(ExpectedConditions.elementToBeClickable(nxtBtnst)).click();
 
 		streetAdd.sendKeys("3030 Stemmons Fwy");
-		zipCode.sendKeys("75247");
+		//zipCode.sendKeys("75247");
 
 		try {
 			Thread.sleep(10000);
@@ -381,9 +379,9 @@ return false;
 			if (!activeHandle.equals(MainWindow)) {
 				driver.switchTo().window(activeHandle);
 			}
-			
+
 			pauseFiveSecond();
-			
+
 			phoneNum.sendKeys("11111111111");
 			email.sendKeys("tidyseyhan@gmail.com");
 			pauseOneSecond();
@@ -393,7 +391,7 @@ return false;
 		pauseFiveSecond();
 
 		okBtn.click();
-		
+
 		return testResult;
 
 	}

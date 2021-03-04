@@ -22,6 +22,7 @@ public class GetQuoteTest extends TestBase {
 	public void setUp() {
 
 		initialization();
+		
 		getQuote = new GetQuote();
 	}
 
@@ -39,18 +40,17 @@ public class GetQuoteTest extends TestBase {
 		}
 
 		if (b)
-			TestUtils.sendEmail(
-					"SUCCESS. Getting quote with PublicData test got passed",
-					"SUCCESS - GetQuote w/ PublicData :)");
+			TestUtils.sendEmail("SUCCESS. Getting quote with PublicData test got passed",
+					"SUCCESS - GetQuote w/ PublicData :)"
+					);
 		else
-			TestUtils.sendEmail(
-					"FAILED. Getting quote with PublicData test got failed, but I'm checking immediately",
+			TestUtils.sendEmail("FAILED. Getting quote with PublicData test got failed, but I'm checking immediately",
 					"FAILED - GetQuote w/ PublicData :/"
 					);
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void getQuoteManual() {
 
 		boolean b = true;
@@ -64,8 +64,9 @@ public class GetQuoteTest extends TestBase {
 		}
 
 		if (b)
-			TestUtils.sendEmail( "SUCCESS - GetQuote w/ Manual input :)",
-					"SUCCESS. Getting quote with manual input test got passed");
+			TestUtils.sendEmail( "SUCCESS. Getting quote with manual input test got passed",
+					"SUCCESS - GetQuote w/ Manual input :)"
+					);
 		else
 			TestUtils.sendEmail("FAILED - GetQuote w/ Manual input :/",
 					"FAILED. Getting quote with manual input test got failed, but I'm checking immediately"
@@ -73,16 +74,18 @@ public class GetQuoteTest extends TestBase {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void getTitleRateEngine() {
 
 		String actualTitle = driver.getTitle();
 		System.out.println("Page Title :" + actualTitle);
-
+		
+		
 		String expectedTitle = "A-MAX Auto Insurance";
-		String descr = "";
-
+		
+		String descr = " ";
 		boolean b = true;
+		
 		try {
 
 			Assert.assertEquals(actualTitle, expectedTitle);
@@ -108,7 +111,7 @@ public class GetQuoteTest extends TestBase {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void getTitleHome() {
 
 		driver.get("https://www.amaxinsurance.com/");
@@ -155,7 +158,7 @@ public class GetQuoteTest extends TestBase {
 
 	}
 
-	@AfterMethod
+	@AfterMethod(enabled = true)
 	public void tearDown() {
 
 		driver.quit();

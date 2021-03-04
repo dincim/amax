@@ -5,9 +5,12 @@
     <classes>
       <class name="com.qe.qa.testcases.GetQuoteTest">
         <methods>
+          <include name="GetQuoteDl"/>
           <include name="getTitleHome"/>
+          <include name="getQuoteManual"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="getTitleRateEngine"/>
         </methods>
       </class> <!-- com.qe.qa.testcases.GetQuoteTest -->
     </classes>
