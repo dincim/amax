@@ -158,7 +158,7 @@ public class GetQuoteTest extends TestBase {
 
 	}
 
-	@AfterMethod(enabled = true)
+	@AfterMethod(enabled = false)
 	public void tearDown() {
 
 		driver.quit();
